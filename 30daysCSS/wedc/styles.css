@@ -1,0 +1,38 @@
+.Container {
+    margin: 10px;
+}
+img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 50px;
+}
+.header {
+    display: flex;
+}
+
+.hederDiv1 {
+    margin-top: 10px;
+    width: 20%;
+}
+.headerDiv2 {
+    text-align: center;
+    width: 30%;
+}
+.headerDiv3 {
+    text-align: center;
+    width: 800px;
+} 
+.headerDiv3 table {
+    width: 600px;
+    text-align: left;
+}
+.displayInline {
+    display: flex;
+    height: 35px;
+}
+.displayInline p {
+    margin-top: 0;
+}
+table, th, td {
+    border:1px solid black;
+  }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>On bai ReactJs</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <!-- <script>
+        const postItem = React.createElement(
+            'div',{
+            className: 'post-item',
+            },
+           
+            React.createElement('h2',{title:'Hoc React tai F8'}, 'Hoc react tai F8'),
+            React.createElement('p',null,'Hoc React tu co ban toi nang cao')
+        
+            );
+
+            const root = document.getElementById('root');
+            ReactDOM.render(postItem, root)
+    </script> -->
+    <!-- <script>
+        const ulReact = React.createElement(
+            'ul',
+            {},
+            React.createElement('li',{},'JavaScript'),
+            React.createElement('li',{},'ReactJS')
+            )
+            const root = document.getElementById('root')
+            ReactDOM.render(ulReact,root)
+    </script> -->
+    <!-- <script type="text/babel">
+        const courses = [
+            {
+                id: 1,
+                name: 'js',
+                price: 20,
+                des: 'hayy'
+            },
+            {
+                id: 2,
+                name: 'java',
+                price: 21,
+                des: 'hay'
+            },
+            {
+                id: 3,
+                name: 'php',
+                price: 22,
+                des: ' rat hayy'
+            },
+        ]
+        function CourseItem({course, onClick}) {
+           return (
+               <div>
+                    <h1 onClick={() =>onClick(course)} >{course.name}</h1>
+                    <h2>{course.price}</h2>
+                    <h3>{course.des}</h3>
+                </div>
+           )
+        }
+        function App() {
+            const handleClick= (course) =>  {
+                console.log(course.name);
+            }
+            return (
+                <div id="wrapper">
+                {courses.map(course => (
+                   <CourseItem
+                    key={course.id}
+                    course={course}
+                    onClick={handleClick}
+                    />
+                    
+            ))}
+                    </div>
+            )
+        }   
+                
+        ReactDOM.render(<App/>, document.getElementById('root'))
+
+    </script> -->
+    <!-- <script type="text/babel">
+        function PostItem() {
+            return (
+                <div>
+                    <h2>Hello</h2>   
+                    <h2>Hello</h2>                        
+                </div>
+            )
+        }
+
+        function App() {
+            return(
+               <div>
+               <PostItem/>
+                </div>
+            )
+        }
+        ReactDOM.render(<App/>, document.getElementById('root'))
+    </script> -->
+
+
+    <script type="text/babel">
+        
+    </script>
+</body>
+
+</html>

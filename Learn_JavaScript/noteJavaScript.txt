@@ -1,0 +1,27 @@
+methods with array:
+-concat()
+	The concat() method concatenates (joins) two or more arrays.
+
+	The concat() method returns a new array, containing the joined arrays.
+
+	The concat() method does not change the existing arrays.
+-every():
+ 	return True if ALL elements in array pass test(dieu kien trong func) else
+-fill() :
+	The fill() method fills specified elements in an array with a value.
+
+	The fill() method overwrites the original array.
+
+	Start and end position can be specified. If not, all elements will be filled.
+	syntax: array.fill(value, start, end)
+-filter():
+	get every element in array that pass test.
+-find():
+	find() returns the value of the first element in an array that passes a test (provided by a function)
+-includes(): 
+	return true if contains a specified value, else.
+-IndexOf(): 
+	The indexOf() method returns the first index (position) of a specified value.
+	The indexOf() method returns -1 if the value is not found.
+	syntax: array.indexOf(item, start) , start default = 0.
+- 

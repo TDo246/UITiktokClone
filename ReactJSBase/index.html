@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Base</title>
+    
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+</head>
+<body>
+
+
+    <!-- <div id="root"></div> -->
+
+
+    <!-- <script>
+        const h1 = document.createElement('h1');
+        h1.innerText = 'hi guys';
+        const root = document.querySelector('#root');
+        root.appendChild(h1);
+        h1.id = 'heading';
+        h1.className = 'test test-3'
+       // h1.style.color = 'blue'
+        h1.style = 'color: green; font-size:40px';
+        Object.assign(h1.style, {
+            color:'red',
+            backgroundColor: '#333'
+            
+        })
+        console.log(React.version);
+    </script> -->
+    <!-- <script>
+        //DOM
+   
+    //     React DOM
+    const h1DOM = document.createElement('h1');
+    h1DOM.id = 'heading';
+    h1DOM.innerText = 'Hi Guys';
+    document.body.appendChild(h1DOM);
+        const h1React = React.createElement('h1', {
+            title: 'React Base',
+            className: 'reActHeading',
+            id:'reID'
+        }, 'React Hello');
+
+    //    React.createElement(type, props, children, n)
+        //React
+        const ulDOM = document.createElement('ul');
+            
+        const liDOM1 = document.createElement('li');
+        liDOM1.innerText = 'JS'
+        liDOM.id = 'li-1'
+        const liDOM2 = document.createElement('li');
+        liDOM2.innerText = 'ReactJS'
+        liDOM.id = 'li-2'
+        ulDOM.appendChild(liDOM1)
+        ulDOM.appendChild(liDOM2)
+
+        document.body.appendChild(ulDOM)
+    </script> -->
+ 
+ <!-- <script>
+    //    React.createElement(type, props, children, n)
+   var ulReact = React.createElement(
+       'ul',//type
+       {
+
+       },//props
+       React.createElement('li',null,'JavaScript'),//children
+       React.createElement('li',null,'ReactJS'), //children
+
+   );
+   console.log(ulReact);
+
+ </script> -->
+<div id="root"></div>
+ <script type="text/babel">
+     const courses = [
+         {  
+             id: 1,
+             name: 'js',
+             price: 20,
+             des:'hayy'
+         },
+         {
+            id: 2,
+             name: 'java',
+             price: 21,
+             des:'hay'
+         },
+         {
+            id: 3,
+             name: 'php',
+             price: 22,
+             des:' rat hayy'
+         },
+     ]
+        //  const CourseItem = props => (
+        //      <div>
+        //         <p>{props.id}</p>
+        //         <p>{props.name}</p>
+        //         <p>{props.price}</p>
+        //         <p>{props.des}</p>
+        //         </div>
+        //  )
+            //UI component
+            function CourseItem({course, onClick}) {
+                return (
+                    <div>
+                        <h2 onClick={() => onClick(course)}>{course.name}</h2>
+                        <h3>{course.price}</h3>    
+                        <h4>{course.des}</h4>
+                    </div>
+                )
+            }
+            function App() {
+
+                const handleClick = (course) => {
+                    console.log(course.name);
+                }
+                return (
+                    <div id="wrapper">
+                        {courses.map(course => (
+                            <CourseItem
+                                key={course.id}
+                                course={course}
+                                onClick={handleClick}
+
+                            />
+                        ))}
+                    </div>
+                )
+            }
+     ReactDOM.render(<App/>, document.getElementById('root'));
+
+    //  function Header() {
+    //      return (
+    //          <div className="header">Header function</div>
+    //      )
+    //  }
+    //  function Content() {
+    //      return (
+    //          <div className="header">Content function</div>
+    //      )
+    //  }
+    //  function PostItem({
+    //      alt,
+    //      title,
+    //      des
+    //  }) {
+    //     return(
+    //         <div className="post-item">
+    //         <img src="" alt={alt}/>
+    //         <h2>{title}</h2>
+    //         <p>{des}</p>
+    //     </div>
+    //     )
+    //  }
+    //  const root = (
+    //     <div className="container"> 
+               
+    //            <PostItem
+    //             title='1 al title duoc truyen'
+    //             alt='1 day la ALT duoc truyen'
+    //             des='1 hello anh em nhe!!!!'
+    //            />
+    //            <PostItem 
+    //             title='2 Day al title duoc truyen'
+    //             alt='2 day la ALT duoc truyen'
+    //             des='2 hello anh em nhe!!!!'
+    //            />
+    //            <PostItem
+    //             title='3 Day al title duoc truyen'
+    //             alt='3 day la ALT duoc truyen'
+    //             des='3 hello anh em nhe!!!!'
+    //            />
+               
+    //     </div>
+    //  )
+    //  console.log(root);
+    // ReactDOM.render(root, document.getElementById('root'));
+
+    // const course = [
+    //     {
+    //         name: 'a'
+    //     },
+    //     {
+    //         name: 'b'
+    //     },
+    //     {
+    //         name: 'c'
+    //     },
+    // ]
+    //      const [{name,name2, name3}] = course;
+    //     console.log(name);
+    //  const reactCourse = 'React JS';
+    //  const ul = <ul>
+    //         {
+    //             course.map(c=>
+    //             <li>{c.name}</li>
+
+    //             )
+    //         }
+    //             </ul>
+
+
+               // ReactDOM.render(ul, document.getElementById('root'));
+    //  var divDOM = document.createElement('div');
+    //  var h2DOM = document.createElement('h2');
+    // h2DOM.innerText = 'Hoc ReactJS'
+    // h2DOM.title = 'Hoc react tai F8'
+    // var pDOM = document.createElement('p');
+    // pDOM.innerText = 'Hoc React tu co ban toi nang cao';
+    // divDOM.appendChild(h2DOM);
+    // divDOM.appendChild(pDOM);
+    // document.body.appendChild(divDOM);
+
+    //React
+    // var divReact = React.createElement('div',
+    //     {
+    //         className: 'post-item'
+    //     },
+    //     React.createElement('h2', {title:'Hoc React tai F8'},'Hoc React JS'),
+    //     React.createElement('p', null,'Hoc react tu co ban toi nang caozz')
+        
+    // )
+    // var root = document.getElementById('root');
+    //     ReactDOM.render(divReact, root);
+    
+ </script>
+    <script src="./app.js" type="module"></script>
+    <script src="./logger.js" type="module"></script>
+    <script src="./constant.js" type="module"></script>
+
+</body>
+</html>
